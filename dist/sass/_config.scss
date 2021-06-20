@@ -1,0 +1,25 @@
+$primary-color: #1dd1;
+$secondary-color:  #1a2980;
+$base-color: rgb(179, 21, 194);
+$navbar: linear-gradient(90deg, #1f005c, #5b0060, #870160, #ac255e, #ca485c, #e16b5c, #f39060, #ffb56b);
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+@mixin transition-ease {
+    transition: .3s ease-in-out;
+}
+
+// functions
+@function set-text-color($color) {
+    @if (lightness($color) < 40%) {
+        @return #000;
+    } 
+    @else {
+        @return #fff;
+    }
+}
